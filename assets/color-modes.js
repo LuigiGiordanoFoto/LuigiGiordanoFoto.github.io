@@ -7,17 +7,11 @@
 (() => {
     'use strict'
 
-    const getStoredTheme = () => localStorage.getItem('theme')
+    const getStoredTheme = () => 'dark'
     const setStoredTheme = theme => localStorage.setItem('theme', theme)
 
     const getPreferredTheme = () => {
-        const storedTheme = getStoredTheme()
-        if (storedTheme) {
-            return storedTheme
-        }
-
         return 'dark'
-        //return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
 
     const setTheme = theme => {
